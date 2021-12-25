@@ -6,6 +6,7 @@
   margin-bottom: 2rem;
   border-radius: 1rem;
   background-color: $section-bg;
+  box-sizing: border-box;
   box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.2);
 
   #countdown-timer-wrapper {
@@ -14,31 +15,46 @@
     flex-direction: column;
     align-items: center;
 
+    h2 {
+      font-size: min(2.5rem, 7vw);
+      color: $light-crimson;
+      margin-bottom: 0.5rem;
+    }
+
     h3 {
       font-size: 1.25rem;
       color: $light-crimson;
       margin-bottom: 0.25rem;
     }
 
+    h4 {
+      font-size: 1.35rem;
+      color: $light-crimson;
+      margin-bottom: 0rem;
+    }
+
     #countdown-timer {
       width: 100%;
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
 
       .countdown-item {
-        width: 21vw;
         display: flex;
         flex-direction: column;
         align-items: center;
 
+        &:last-of-type {
+          width: 17vw;
+        }
+
         h1 {
-          font-size: 14vw;
+          font-size: 12.5vw;
           line-height: 14.5vw;
           color: $dark-crimson;
         }
 
         p {
-          font-size: 4vw;
+          font-size: 3.5vw;
           line-height: 4.5vw;
           color: $light-crimson;
         }
@@ -141,13 +157,22 @@
     padding: 1.5rem;
 
     #countdown-timer-wrapper {
+      h2 {
+        font-size: min(6.5vw, 3.5rem);
+      }
       h3 {
         font-size: 2rem;
+      }
+      h4 {
+        font-size: 1.6rem;
       }
 
       #countdown-timer {
         .countdown-item {
-          width: 20vw;
+          &:last-of-type {
+            width: 16vw;
+          }
+
           h1 {
             font-size: 12vw;
             line-height: 12.5vw;
@@ -210,10 +235,16 @@
       h3 {
         font-size: 2.25rem;
       }
+      h4 {
+        font-size: 1.75rem;
+      }
 
       #countdown-timer {
+        max-width: min(950px, 70vw);
         .countdown-item {
-          width: min(15vw, 15rem);
+          &:last-of-type {
+            width: min(15vw, 10rem);
+          }
 
           h1 {
             font-size: min(10vw, 9rem);

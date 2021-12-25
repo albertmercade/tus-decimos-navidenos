@@ -8,9 +8,9 @@ import logoEP from "../../resources/images/logo-elpais.png";
 
 import "./statusinfo.scss";
 
-const timeToLottery = () => {
-  const lotteryDate = new Date("2021-12-22T09:00:00");
-  const timeDiff = lotteryDate - Date.now();
+const timeToLottery = (nextDrawDate) => {
+  const drawDate = new Date(nextDrawDate);
+  const timeDiff = drawDate - Date.now();
 
   const totalSecs = Math.floor(timeDiff / 1000);
   return {
@@ -47,7 +47,14 @@ const countdown = (timeLeft) => {
   const { days, hours, mins, secs } = timeLeft;
   return (
     <div id="countdown-timer-wrapper">
-      <h3>El sorteo empezará en</h3>
+      {timeLeft.days < 21 ? (
+        <h3>El sorteo empezará en</h3>
+      ) : (
+        <>
+          <h2>¡Hasta el próximo sorteo!</h2>
+          <h4>Quedan..</h4>
+        </>
+      )}
       <div id="countdown-timer">
         <div className="countdown-item">
           <h1>{days < 10 ? `0${days}` : days}</h1>
@@ -124,24 +131,24 @@ const statusContent = (status, timeLeft, timeFinished) => {
     case 3:
       return provisionalResults();
     case 4:
-      return definitiveResults();
+      return timeLeft.days > 360 ? definitiveResults() : countdown(timeLeft);
     default:
       return <Loading />;
   }
 };
 
 const StatusInfo = (props) => {
-  const { lotteryStatus } = props;
+  const { lotteryStatus, nextDrawDate } = props;
 
   const [timeFinished, setTimeFinished] = useState(
-    new Date("2021-12-22T09:00:00") - Date.now() < 0
+    new Date(nextDrawDate) - Date.now() < 0
   );
-  const [timeLeft, setTimeLeft] = useState(timeToLottery());
+  const [timeLeft, setTimeLeft] = useState(timeToLottery(nextDrawDate));
 
   useEffect(() => {
     if (!timeFinished) {
       var interval =
-        lotteryStatus === 0 &&
+        (lotteryStatus === 0 || lotteryStatus >= 4) &&
         setInterval(() => {
           setTimeLeft((timeLeft) => decreaseTimeLeft(timeLeft));
         }, 1000);

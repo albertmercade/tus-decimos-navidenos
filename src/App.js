@@ -13,6 +13,8 @@ import { numToArray, generateLotteryTicket } from "./utils/GenerateTicketUtil";
 // Styling
 import "./App.scss";
 
+const NEXT_DRAW_DATE = "2022-12-22T09:00:00";
+
 const App = () => {
   const [ticketInfoList, setTicketInfoList] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -127,7 +129,10 @@ const App = () => {
     <div className="App">
       <div id="content-wrapper">
         <Header />
-        <StatusInfo lotteryStatus={lotteryStatus} />
+        <StatusInfo
+          lotteryStatus={lotteryStatus}
+          nextDrawDate={NEXT_DRAW_DATE}
+        />
         <OwnedTickets
           loading={loading}
           lotteryStarted={lotteryStarted}
