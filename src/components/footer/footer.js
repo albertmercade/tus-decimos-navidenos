@@ -3,7 +3,12 @@ import "./footer.scss";
 const Footer = () => {
   return (
     <div id="footer">
-      <p>Hecho por Albert Mercadé</p>
+      <p>
+        Hecho por{" "}
+        <a href="https://albertmercade.com" target="_blank">
+          Albert Mercadé
+        </a>
+      </p>
     </div>
   );
 };
