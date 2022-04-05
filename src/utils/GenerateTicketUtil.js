@@ -1,5 +1,5 @@
 import { createCanvas, loadImage } from "canvas";
-import tickettemplate from "../resources/images/ticket-template-full.jpeg";
+import tickettemplate from "../assets/images/ticket-template-full.jpeg";
 
 const NUMSDICT = {
   0: "CERO",

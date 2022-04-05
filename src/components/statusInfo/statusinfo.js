@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 
 import Loading from "../loading/loading";
 
-import logoTVE from "../../resources/images/logo-tve.png";
-import logoRNE from "../../resources/images/logo-rne.png";
-import logoEP from "../../resources/images/logo-elpais.png";
+import logoTVE from "../../assets/images/logo-tve.png";
+import logoRNE from "../../assets/images/logo-rne.png";
+import logoEP from "../../assets/images/logo-elpais.png";
 
 import "./statusinfo.scss";
 
