@@ -3,8 +3,10 @@
   <h1>Tus Décimos Navideños</h1>
 </div>
 
-React web application to keep track of your lottery tickets and earned prize money in the Spanish National Christmas lottery.
+React web app to keep track of your lottery tickets and earned prize money in the Spanish National Christmas lottery.
+
+Implementation details:
+* **Languages:** Javascript (React), HTML & CSS
+* **API:** Uses [El País API](https://servicios.elpais.com/sorteos/loteria-navidad/api/) to check lottery results.
 
 Check it out at: https://tusdecimosnavideños.es
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
