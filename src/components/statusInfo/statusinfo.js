@@ -8,9 +8,8 @@ import logoEP from "../../assets/images/logo-elpais.png";
 
 import "./statusinfo.scss";
 
-const timeToLottery = (nextDrawDate) => {
-  const drawDate = new Date(nextDrawDate);
-  const timeDiff = drawDate - Date.now();
+const timeToLottery = (drawDate) => {
+  const timeDiff = drawDate - new Date();
 
   const totalSecs = Math.floor(timeDiff / 1000);
   return {
@@ -131,7 +130,7 @@ const statusContent = (status, timeLeft, timeFinished) => {
     case 3:
       return provisionalResults();
     case 4:
-      return timeLeft.days > 360 ? definitiveResults() : countdown(timeLeft);
+      return timeLeft.days > 355 ? definitiveResults() : countdown(timeLeft);
     default:
       return <Loading />;
   }
@@ -141,7 +140,7 @@ const StatusInfo = (props) => {
   const { lotteryStatus, nextDrawDate } = props;
 
   const [timeFinished, setTimeFinished] = useState(
-    new Date(nextDrawDate) - Date.now() < 0
+    nextDrawDate - new Date() < 0
   );
   const [timeLeft, setTimeLeft] = useState(timeToLottery(nextDrawDate));
 
@@ -154,7 +153,11 @@ const StatusInfo = (props) => {
         }, 1000);
     }
     return () => clearInterval(interval);
-  }, [lotteryStatus]);
+  }, [lotteryStatus, timeFinished]);
+
+  useEffect(() => {
+    setTimeFinished(timeLeft.days < 0);
+  }, [timeLeft]);
 
   return (
     <div id="statusinfo-wrapper">

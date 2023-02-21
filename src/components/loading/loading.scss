@@ -1,6 +1,12 @@
+@import "../../styles/colors.scss";
+
 #loading-wrapper {
   width: 100%;
   padding: 2rem 0;
   display: flex;
   justify-content: center;
+}
+
+.spinner-border {
+  color: $dark-crimson;
 }

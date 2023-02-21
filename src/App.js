@@ -8,12 +8,13 @@ import OwnedTickets from "./components/ownedTickets/ownedTickets";
 import Footer from "./components/footer/footer";
 
 // Utils
-import { numToArray, generateLotteryTicket } from "./utils/GenerateTicketUtil";
+import { numToArray, generateLotteryTicket } from "./utils/generateTicketUtil";
+import { nextDrawDate } from "./utils/date.utils";
 
 // Styling
 import "./App.scss";
 
-const NEXT_DRAW_DATE = "2022-12-22T09:00:00";
+const NEXT_DRAW_DATE = nextDrawDate();
 
 const App = () => {
   const [ticketInfoList, setTicketInfoList] = useState([]);

@@ -1,5 +1,5 @@
 import { createCanvas, loadImage } from "canvas";
-import tickettemplate from "../assets/images/ticket-template-full.jpeg";
+import ticketTemplate from "../assets/images/ticket-template-full.jpeg";
 
 const NUMSDICT = {
   0: "CERO",
@@ -31,7 +31,7 @@ const generateLotteryTicket = async (
   const canvas = createCanvas(WIDTH, HEIGHT);
   const context = canvas.getContext("2d");
 
-  const ticketTemplateImage = await loadImage(tickettemplate);
+  const ticketTemplateImage = await loadImage(ticketTemplate);
   context.drawImage(ticketTemplateImage, 0, 0, WIDTH, HEIGHT);
 
   context.font = "bold 50pt Arial";
