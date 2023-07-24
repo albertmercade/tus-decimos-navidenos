@@ -29,6 +29,7 @@ const AddTicketModal = (props) => {
               type="text"
               name="number"
               placeholder="01234"
+              maxLength={5}
               isInvalid={clicked && errors.number}
             />
             <Form.Control.Feedback type="invalid">

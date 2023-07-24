@@ -1,5 +1,5 @@
 import { createCanvas, loadImage } from "canvas";
-import ticketTemplate from "../assets/images/ticket-template-full.jpeg";
+import ticketTemplate from "../assets/images/2023-ticket-template.jpg";
 
 const NUMSDICT = {
   0: "CERO",
@@ -37,20 +37,20 @@ const generateLotteryTicket = async (
   context.font = "bold 50pt Arial";
   context.textAlign = "center";
   context.fillStyle = "#000";
-  context.fillText(money, 892.5, 422.5);
+  context.fillText(money, 892.5, 427);
 
   for (const [idx, num] of ticketNumber.entries()) {
     // Big number
     context.font = "800 73pt Inter, Arial";
     context.textAlign = "center";
     context.fillStyle = "#000";
-    context.fillText(num, 385 + 90 * idx, 147);
+    context.fillText(num, 385 + 90 * idx, 160);
 
     // Small number text
     context.font = "bold 11pt Inter, Arial";
     context.textAlign = "center";
     context.fillStyle = "#000";
-    context.fillText(NUMSDICT[num], 385 + 90 * idx, 167);
+    context.fillText(NUMSDICT[num], 385 + 90 * idx, 180);
   }
 
   return canvas.toDataURL("image/png");
