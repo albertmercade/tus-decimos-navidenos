@@ -9,4 +9,4 @@ Implementation details:
 * **Languages:** Javascript (React), HTML & CSS
 * **API:** Uses [El País API](https://servicios.elpais.com/sorteos/loteria-navidad/api/) to check lottery results.
 
-Check it out at: [https://tusdecimosnavideños.es](https://albertmercade.github.io/tus-decimos-navidenos/)https://albertmercade.github.io/tus-decimos-navidenos/
+Check it out at: [https://albertmercade.github.io/tus-decimos-navidenos](https://albertmercade.github.io/tus-decimos-navidenos/)
