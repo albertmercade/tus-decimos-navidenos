@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/tus-decimos-navidenos/static/css/main.6ec96422.chunk.css",
+    "main.js": "/tus-decimos-navidenos/static/js/main.72fd873a.chunk.js",
+    "main.js.map": "/tus-decimos-navidenos/static/js/main.72fd873a.chunk.js.map",
+    "runtime-main.js": "/tus-decimos-navidenos/static/js/runtime-main.f3291e63.js",
+    "runtime-main.js.map": "/tus-decimos-navidenos/static/js/runtime-main.f3291e63.js.map",
+    "static/js/2.491d96e4.chunk.js": "/tus-decimos-navidenos/static/js/2.491d96e4.chunk.js",
+    "static/js/2.491d96e4.chunk.js.map": "/tus-decimos-navidenos/static/js/2.491d96e4.chunk.js.map",
+    "index.html": "/tus-decimos-navidenos/index.html",
+    "static/css/main.6ec96422.chunk.css.map": "/tus-decimos-navidenos/static/css/main.6ec96422.chunk.css.map",
+    "static/js/2.491d96e4.chunk.js.LICENSE.txt": "/tus-decimos-navidenos/static/js/2.491d96e4.chunk.js.LICENSE.txt",
+    "static/media/2023-ticket-template.4848cd2b.jpg": "/tus-decimos-navidenos/static/media/2023-ticket-template.4848cd2b.jpg",
+    "static/media/logo-rne.f7023627.png": "/tus-decimos-navidenos/static/media/logo-rne.f7023627.png",
+    "static/media/logo-tve.61c8970d.png": "/tus-decimos-navidenos/static/media/logo-tve.61c8970d.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f3291e63.js",
+    "static/js/2.491d96e4.chunk.js",
+    "static/css/main.6ec96422.chunk.css",
+    "static/js/main.72fd873a.chunk.js"
+  ]
+}
